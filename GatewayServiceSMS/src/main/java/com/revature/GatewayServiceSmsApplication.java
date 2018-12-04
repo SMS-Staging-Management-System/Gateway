@@ -8,9 +8,9 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @EnableZuulProxy
 @EnableDiscoveryClient
 @SpringBootApplication
-public class SnsGatewayServiceApplication {
+public class GatewayServiceSmsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SnsGatewayServiceApplication.class, args);
+		SpringApplication.run(GatewayServiceSmsApplication.class, args);
 	}
 }

@@ -9,7 +9,7 @@ zuul:
       serviceId: user-service
       strip-prefix: false
     accounts:
-      path: /checkin/**
+      path: /checkins/**
       serviceId: checkin-service
       strip-prefix: false  
   
