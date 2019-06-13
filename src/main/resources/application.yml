@@ -8,6 +8,12 @@ zuul:
     users: 
       path: /user-service/**
       url: http://localhost:8090/
+    interviews:
+      path: /interview-service/**
+      url: http://localhost:8091/
+    surveys:
+      path: /survey-service/**
+      url: http://localhost:8092/
     cognito:
       path: /cognito/**
       url: https://7i6rudc3m2.execute-api.us-east-1.amazonaws.com/uat/
