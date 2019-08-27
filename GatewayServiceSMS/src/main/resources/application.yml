@@ -1,26 +1,39 @@
 spring:
   application:
     name: gateway-server
+  profiles:
+    active:
+    - dev
 
     
 zuul:
+  
   routes:
     users: 
       path: /users/**
       serviceId: user-service
       strip-prefix: false
+      url: https://7i6rudc3m2.execute-api.us-east-1.amazonaws.com/uat
     checkins:
       path: /checkins/**
       serviceId: checkin-service
       strip-prefix: false
+      url: https://7i6rudc3m2.execute-api.us-east-1.amazonaws.com/uat
     cohorts:
       path: /cohorts/**
       serviceId: user-service
-      strip-prefix: false  
+      strip-prefix: false
+      url: https://7i6rudc3m2.execute-api.us-east-1.amazonaws.com/uat
+    interviews:
+      path: /interviews/**
+      serviceId: interview-service
+      url: http://localhost:8091
+    
     cognito:
       path: /cognito/**
       url: https://t4o3pxu8dj.execute-api.us-west-2.amazonaws.com/dev
       strip-prefix: false
+    
   
 eureka:
   client:
@@ -45,7 +58,6 @@ hystrix:
   
 server:
   port: 8765
-
 
 
   
